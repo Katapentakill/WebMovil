@@ -1,0 +1,99 @@
+{
+	"info": {
+		"_postman_id": "ce971ea4-ea3e-4bc1-9bcd-55e051f84923",
+		"name": "Chairs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33696577"
+	},
+	"item": [
+		{
+			"name": "GetChair",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5275/chair"
+			},
+			"response": []
+		},
+		{
+			"name": "AddChair",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Nombre\": \"silla1\",\r\n    \"Tipo\": \"comedor\",\r\n    \"Material\": \"aluminio\",\r\n    \"Color\": \"azul\",\r\n    \"Altura\": 2,\r\n    \"Anchura\": 2,\r\n    \"Profundidad\": 45,\r\n    \"Precio\":29990,\r\n    \"Stock\": 100\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5275/api/chair/"
+			},
+			"response": []
+		},
+		{
+			"name": "AllChairs",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "ByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:5275/api/chair/Name/silla1"
+			},
+			"response": []
+		},
+		{
+			"name": "Actualizar",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Altura\": 2,\r\n    \"Anchura\": 2,\r\n    \"Color\": \"azul\",\r\n    \"Material\": \"Carton\",\r\n    \"Nombre\": \"test\",\r\n    \"Precio\":29990,\r\n    \"Profundidad\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5275/api/chair/Act/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:5275/api/chair/del/1"
+			},
+			"response": []
+		},
+		{
+			"name": "Stock",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:5275/api/chair/stock/1/30"
+			},
+			"response": []
+		}
+	]
+}
